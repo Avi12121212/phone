@@ -8,5 +8,8 @@ urlpatterns = [
     path("", views.index),
     path("avi/", views.avi),
     path("phone/", views.phone),
+    path("login/", views.user),
+    path("signup/", views.signup),
+    path("signout/", views.signout),
 
 ]

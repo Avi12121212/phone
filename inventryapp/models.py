@@ -10,6 +10,7 @@ class Phone(models.Model):
     model = models.CharField(max_length=200)
     feature = models.CharField(max_length=200)
     camera = models.CharField(max_length=200)
+
     def getPhone(self):
         return self.phone
 
@@ -20,3 +21,18 @@ class Phone(models.Model):
 
     class Meta:
         db_table = "phone"
+
+
+class Myuser(models.Model):
+    name = models.CharField(max_length=200)
+    username = models.CharField(max_length=200)
+    password = models.CharField(max_length=200)
+
+    def getName(self):
+        return self.name
+
+    def __str__(self):
+        return "Name={0},Username={1},Password={2}".format(self.name, self.username, self.password)
+
+    class Meta:
+        db_table = "myuser"

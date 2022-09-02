@@ -5,11 +5,16 @@
     <title>phone</title>
 </head>
 <body>
+{% for key,value in session %}
+{{key}}
+{{value}}
+{% endfor %}<br><br>
 <form action="" method="get">
     <input type="text" name="phone" value="{{phone}}"><br>
     <input type="submit" name="" value="submit">
-</form>
 
+</form>
+<center><button>logout</button></center>
 <br>
 <br>
 <table border="5">
